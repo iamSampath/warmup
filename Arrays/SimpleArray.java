@@ -26,18 +26,12 @@ public class SimpleArray{
 
     //Three Dim Array with value intialization
     int[][][] threeDimArray ={
-       {{1,   2,  3}, { 4,  5,  6}, { 7,  8,  9}},
-       {{10, 11, 12}, {13, 14, 15}, {16, 17, 18}},
-       {{1,   g2,  3}, { 4,  5,  6}, { 7,  8,  9}}
-     };
+      {{1,2,3}},{{4,5,6}},{{7,8,9}}
+    };
     System.out.println(threeDimArray.length);
 
     //Three Dim Array with default Initialization
     int [][][] threeDimArrayInit = new int[3][3][3];
     System.out.println(threeDimArrayInit.length);
-
-
-
-
   }
 }
