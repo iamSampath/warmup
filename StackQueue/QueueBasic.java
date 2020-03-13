@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 class QueueBasic{
-
+    Node head;
    static class Node{
         int data;
         Node next;
@@ -14,7 +14,7 @@ class QueueBasic{
         }
     }
 
-     Node head;
+
      Node tail;
 
     public void add(int insData){
@@ -65,10 +65,16 @@ class QueueBasic{
         nums.add(15);
         nums.add(40);
         nums.add(80);
+        nums.add(200);
 
         for(Integer num : nums){
             qb.add(num);
         }
+
+        System.out.println(qb.peek());
+        System.out.println(qb.remove());
+        System.out.println(qb.isEmpty());
+        qb.printNode();
     }
 
 }
