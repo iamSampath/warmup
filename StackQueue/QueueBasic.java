@@ -13,8 +13,6 @@ class QueueBasic{
           data = d;
         }
     }
-
-
      Node tail;
 
     public void add(int insData){
@@ -70,7 +68,6 @@ class QueueBasic{
         for(Integer num : nums){
             qb.add(num);
         }
-
         System.out.println(qb.peek());
         System.out.println(qb.remove());
         System.out.println(qb.isEmpty());
