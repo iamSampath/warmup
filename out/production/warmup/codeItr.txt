@@ -1,0 +1,62 @@
+Iteration 3: insert Node Before
+
+I made below no of tries to achieve the actual insertion of Node before a valid version of the feature
+
+code is wrong because the insertion of node fails to add node before when the given position is 0
+
+Itr 1:
+        Node curNode = head;
+        Node prevNode = curNode;
+        int counter = 0;
+        while (curNode != null && !(counter == pos)) {
+            prevNode = curNode;
+            curNode = curNode.next;
+            counter++;
+        }
+
+        if (curNode != null) {
+        // Error part
+            prevNode.next = new Node(insData);
+            printNode(curNode);
+            curNode = curNode.next;
+        }
+
+
+Itr 2:
+            if(curNode.next == null){
+                    newNode = new Node(insData);
+                    newNode.next = curNode;
+                    curNode.next = null;
+                    System.out.println(insData + "Inserted into the LinkedList");
+                }else{
+                     while(curNode.next == null){
+                         if(counter == pos){
+                             newNode = new Node(insData);
+                             prevNode.next = newNode;
+                             newNode.next = curNode;
+                         }else{
+                             prevNode = curNode;
+                             curNode = curNode.next;
+                         }
+                         counter++;
+                     }
+                    printNode(newNode);
+
+                }
+
+Itr 3:
+
+        if (curNode == null) {
+            System.out.println("Insertion not possible");
+            return;
+        }
+        while (curNode != null && !(counter == pos)) {
+            prevNode = curNode;
+            curNode = curNode.next;
+        }
+
+        if (curNode != null) {
+            newNode = new Node(insData);
+            prevNode.next = newNode;
+            newNode.next = curNode;
+        }
